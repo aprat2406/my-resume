@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail, Github, Linkedin, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { generateResumePDF } from "@/lib/generateResume";
 
 const HeroSection = () => {
   return (
@@ -80,6 +81,12 @@ const HeroSection = () => {
             >
               <Mail size={16} /> Contact Me
             </a>
+            <button
+              onClick={generateResumePDF}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"
+            >
+              <Download size={16} /> Resume
+            </button>
           </div>
         </motion.div>
       </div>
