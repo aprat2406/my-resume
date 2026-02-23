@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Github, Linkedin, Download } from "lucide-react";
+import { MapPin, Mail, Github, Linkedin, Download, FileText } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { generateResumePDF } from "@/lib/generateResume";
+import { generateResumeDocx } from "@/lib/generateResumeDocx";
 
 const HeroSection = () => {
   return (
@@ -85,7 +86,13 @@ const HeroSection = () => {
               onClick={generateResumePDF}
               className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"
             >
-              <Download size={16} /> Resume
+              <Download size={16} /> PDF
+            </button>
+            <button
+              onClick={generateResumeDocx}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"
+            >
+              <FileText size={16} /> DOCX
             </button>
           </div>
         </motion.div>

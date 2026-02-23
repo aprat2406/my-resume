@@ -2,115 +2,149 @@ import { jsPDF } from "jspdf";
 
 export const generateResumePDF = () => {
   const doc = new jsPDF();
-  const pageWidth = doc.internal.pageSize.getWidth();
-  let y = 20;
-  const margin = 20;
-  const contentWidth = pageWidth - margin * 2;
+  const pw = doc.internal.pageSize.getWidth();
+  const ph = doc.internal.pageSize.getHeight();
+  const m = 14; // margin
+  const cw = pw - m * 2;
+  const colGap = 6;
+  const leftCol = 58;
+  const rightCol = cw - leftCol - colGap;
+  const rightX = m + leftCol + colGap;
+  let y = 0;
 
-  const addSectionTitle = (title: string) => {
-    checkPageBreak(12);
-    doc.setFontSize(13);
-    doc.setFont("helvetica", "bold");
-    doc.setTextColor(0, 150, 136);
-    doc.text(title, margin, y);
-    y += 2;
-    doc.setDrawColor(0, 150, 136);
-    doc.setLineWidth(0.5);
-    doc.line(margin, y, margin + 40, y);
-    y += 8;
-  };
+  const teal: [number, number, number] = [0, 150, 136];
+  const dark: [number, number, number] = [30, 30, 30];
+  const mid: [number, number, number] = [80, 80, 80];
+  const light: [number, number, number] = [120, 120, 120];
 
-  const addText = (text: string, bold = false, size = 10, color: [number, number, number] = [60, 60, 60]) => {
-    checkPageBreak(size * 0.6);
-    doc.setFontSize(size);
-    doc.setFont("helvetica", bold ? "bold" : "normal");
-    doc.setTextColor(...color);
-    const lines = doc.splitTextToSize(text, contentWidth);
-    doc.text(lines, margin, y);
-    y += lines.length * (size * 0.45) + 2;
-  };
-
-  const checkPageBreak = (needed: number) => {
-    if (y + needed > doc.internal.pageSize.getHeight() - 15) {
-      doc.addPage();
-      y = 20;
-    }
-  };
-
-  // Header
-  doc.setFontSize(22);
+  // ─── HEADER BAR ───
+  doc.setFillColor(20, 25, 35);
+  doc.rect(0, 0, pw, 38, "F");
+  doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(30, 30, 30);
-  doc.text("Akshit Pratiush", margin, y);
-  y += 8;
-  doc.setFontSize(11);
+  doc.setTextColor(255, 255, 255);
+  doc.text("AKSHIT PRATIUSH", m, 16);
+  doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
-  doc.setTextColor(0, 150, 136);
-  doc.text("Senior Solutions Architect", margin, y);
-  y += 7;
-  doc.setFontSize(9);
-  doc.setTextColor(100, 100, 100);
-  doc.text("apratiush@gmail.com | +91-9741139265 | Bengaluru, India", margin, y);
-  y += 5;
-  doc.text("GitHub: github.com/aksprat | LinkedIn: linkedin.com/in/akshit-pratiush", margin, y);
-  y += 10;
+  doc.setTextColor(0, 200, 180);
+  doc.text("Senior Solutions Architect", m, 23);
+  doc.setFontSize(7.5);
+  doc.setTextColor(180, 190, 200);
+  doc.text("apratiush@gmail.com  |  +91-9741139265  |  Bengaluru, India", m, 29);
+  doc.text("github.com/aksprat  |  linkedin.com/in/akshit-pratiush", m, 34);
+  y = 44;
 
-  // Summary
-  addSectionTitle("Professional Summary");
-  addText("Experienced Senior Solutions Architect with expertise in designing and implementing scalable cloud solutions for diverse industries. Proven leadership in cloud migrations, infrastructure design, and cost optimization using platforms like AWS, Google Cloud, and DigitalOcean. Skilled in translating business needs into technical strategies, mentoring teams, and driving operational efficiency.");
-  y += 4;
+  // Helper: section title in left column
+  const sectionTitle = (title: string, yPos: number) => {
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(...teal);
+    doc.text(title.toUpperCase(), m, yPos);
+    doc.setDrawColor(...teal);
+    doc.setLineWidth(0.4);
+    doc.line(m, yPos + 1.5, m + leftCol - 4, yPos + 1.5);
+  };
 
-  // Experience
-  addSectionTitle("Professional Experience");
+  const checkPage = (needed: number) => {
+    if (y + needed > ph - 10) { doc.addPage(); y = 14; }
+  };
 
+  // ─── SUMMARY ───
+  sectionTitle("SUMMARY", y);
+  doc.setFontSize(7.5);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(...mid);
+  const summaryLines = doc.splitTextToSize(
+    "Experienced Senior Solutions Architect with expertise in designing scalable cloud solutions. Proven leadership in cloud migrations, infrastructure design, and cost optimization using AWS, Google Cloud, and DigitalOcean. Skilled in translating business needs into technical strategies, mentoring teams, and driving operational efficiency.",
+    rightCol
+  );
+  doc.text(summaryLines, rightX, y);
+  y += summaryLines.length * 3.2 + 4;
+
+  // ─── EXPERIENCE ───
+  sectionTitle("EXPERIENCE", y);
   const experiences = [
     { company: "DigitalOcean", role: "Senior Solutions Architect", period: "Dec 2022 – Present", items: [
-      "Led end-to-end cloud migration from AWS to DigitalOcean, resulting in multi-million-pound contracts.",
-      "Designed scalable infrastructure for data analytics platforms with auto-scaling and managed databases.",
+      "Led cloud migration from AWS to DigitalOcean, securing multi-million-pound contracts.",
+      "Designed scalable infrastructure with auto-scaling, managed databases & secure payment workflows.",
       "Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding.",
-      "Performed architecture reviews and cost audits, improving resource utilization by up to 40%.",
-      "Led POC sessions with enterprise clients involving Kubernetes, PostgreSQL, and VPC networking.",
-      "Authored technical white papers, case studies, and conducted workshops and webinars.",
+      "Performed architecture reviews & cost audits, improving resource utilization by up to 40%.",
+      "Led POC sessions with enterprise clients involving K8s, PostgreSQL & VPC networking.",
+      "Authored technical white papers, case studies, tutorials and conducted workshops.",
     ]},
     { company: "Google Operations Center", role: "Cloud Engineer Specialist", period: "Oct 2021 – Dec 2022", items: [
-      "Technical trainer providing Google Cloud training to new hires and experienced staff.",
+      "Provided Google Cloud training to new hires and experienced staff as technical trainer.",
       "Led and managed a team of 10 big data support engineers.",
       "Provided expert guidance on cloud architecture best practices.",
     ]},
     { company: "T-Systems", role: "Cloud Consultant", period: "Nov 2018 – Oct 2021", items: [
-      "Designed and deployed Citrix on the public cloud with PowerShell automation.",
-      "Consistently reduced Azure services costs and improved virtual desktop performance.",
+      "Designed & deployed Citrix on public cloud with PowerShell automation.",
+      "Reduced Azure services costs and improved virtual desktop performance.",
     ]},
     { company: "Citrix", role: "Technical Lead / Solutions Engineer", period: "Aug 2014 – Oct 2018", items: [
-      "Managed a team of ~10 people as Technical Lead.",
-      "Handled escalated cases, conducted training, specialized in Provisioning Services and MCS.",
+      "Managed team of ~10 as Technical Lead; handled escalated cases.",
+      "Conducted training; specialized in Provisioning Services & MCS.",
     ]},
   ];
 
+  let expStartY = y;
   experiences.forEach((exp) => {
-    checkPageBreak(20);
-    addText(`${exp.company} — ${exp.role}`, true, 11, [30, 30, 30]);
-    addText(exp.period, false, 9, [120, 120, 120]);
+    checkPage(14);
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(...dark);
+    doc.text(`${exp.company}`, rightX, y);
+    const compW = doc.getTextWidth(exp.company);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...light);
+    doc.text(` — ${exp.role}`, rightX + compW, y);
+    doc.setFontSize(7);
+    doc.text(exp.period, rightX + rightCol - doc.getTextWidth(exp.period), y);
+    y += 3.5;
+    doc.setFontSize(7.5);
+    doc.setTextColor(...mid);
     exp.items.forEach((item) => {
-      checkPageBreak(8);
-      addText(`• ${item}`);
+      checkPage(5);
+      const lines = doc.splitTextToSize(`• ${item}`, rightCol - 2);
+      doc.text(lines, rightX + 1, y);
+      y += lines.length * 3 + 0.8;
     });
-    y += 4;
+    y += 2;
   });
 
-  // Skills
-  addSectionTitle("Core Skills");
-  addText("Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring");
-  y += 4;
+  // ─── SKILLS ───
+  checkPage(12);
+  sectionTitle("SKILLS", y);
+  doc.setFontSize(7.5);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(...mid);
+  const skillsText = "Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring";
+  const skillLines = doc.splitTextToSize(skillsText, rightCol);
+  doc.text(skillLines, rightX, y);
+  y += skillLines.length * 3.2 + 5;
 
-  // Education
-  addSectionTitle("Education");
-  addText("M.Sc. Data Science — John Moores University, Liverpool (2026) | GPA: 6.2", true, 10, [30, 30, 30]);
-  addText("B.Tech Computer Science — Biju Patnaik University of Technology (2014) | GPA: 7.2", true, 10, [30, 30, 30]);
+  // ─── EDUCATION ───
+  checkPage(12);
+  sectionTitle("EDUCATION", y);
+  doc.setFontSize(7.5);
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(...dark);
+  doc.text("M.Sc. Data Science", rightX, y);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(...mid);
+  doc.text(" — John Moores University, Liverpool (2026) | GPA: 6.2", rightX + doc.getTextWidth("M.Sc. Data Science"), y);
   y += 4;
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(...dark);
+  doc.text("B.Tech Computer Science", rightX, y);
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(...mid);
+  doc.text(" — BPUT (2014) | GPA: 7.2", rightX + doc.getTextWidth("B.Tech Computer Science"), y);
+  y += 6;
 
-  // Certifications
-  addSectionTitle("Certifications");
+  // ─── CERTIFICATIONS ───
+  checkPage(18);
+  sectionTitle("CERTIFICATIONS", y);
   const certs = [
     "NVIDIA-Certified Associate – AI Infrastructure and Operations",
     "AWS AI/ML Practitioner",
@@ -119,18 +153,42 @@ export const generateResumePDF = () => {
     "Microsoft Certified – Azure Fundamentals (AZ-900)",
     "Citrix Certified Professional – Virtualization (CCP-V)",
   ];
-  certs.forEach((c) => addText(`• ${c}`));
-  y += 4;
+  doc.setFontSize(7.5);
+  doc.setTextColor(...mid);
+  certs.forEach((c) => {
+    checkPage(4);
+    doc.text(`• ${c}`, rightX, y);
+    y += 3.5;
+  });
+  y += 3;
 
-  // Awards
-  addSectionTitle("Awards & Recognition");
+  // ─── AWARDS ───
+  checkPage(14);
+  sectionTitle("AWARDS", y);
   const awards = [
     "DigitalOcean: Golden Fin Award 2025, Sammy Pearl Q1 2024, Sammy Pearl Q1 2023",
     "Google: Touchstone Award – Individual Contributor, Dec 2021",
     "T-Systems: Above and Beyond Award Q1 2020",
     "Citrix: Multiple Kudos, Performance & Excellence Awards (2015–2018)",
   ];
-  awards.forEach((a) => addText(`• ${a}`));
+  doc.setFontSize(7.5);
+  doc.setTextColor(...mid);
+  awards.forEach((a) => {
+    checkPage(4);
+    const lines = doc.splitTextToSize(`• ${a}`, rightCol);
+    doc.text(lines, rightX, y);
+    y += lines.length * 3.2 + 0.8;
+  });
+  y += 3;
+
+  // ─── PUBLICATIONS ───
+  checkPage(10);
+  sectionTitle("PUBLICATIONS", y);
+  doc.setFontSize(7.5);
+  doc.setTextColor(...mid);
+  doc.text("• Published multiple technical tutorials on DigitalOcean Community.", rightX, y);
+  y += 3.5;
+  doc.text("• YouTube channel with 2,500+ views across technical demo videos.", rightX, y);
 
   doc.save("Akshit_Pratiush_Resume.pdf");
 };
