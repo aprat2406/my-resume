@@ -113,7 +113,7 @@ export const generateResumeDocx = async () => {
             spacing: { after: 80 },
             children: [
               new TextRun({
-                text: "Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring",
+                text: "Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring • LLMs – Inference & Deployment • GPU-based Workloads (Training & Inference)",
                 size: 18,
                 color: mid,
                 font: "Calibri",

@@ -118,7 +118,7 @@ export const generateResumePDF = () => {
   doc.setFontSize(7.5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...mid);
-  const skillsText = "Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring";
+  const skillsText = "Cloud Architecture Design • Infrastructure as Code • Customer Engagement • Project Management • Kubernetes & Containerization • Cloud Migration Strategies • Cost Optimization • Technical Leadership & Mentoring • LLMs – Inference & Deployment • GPU-based Workloads (Training & Inference)";
   const skillLines = doc.splitTextToSize(skillsText, rightCol);
   doc.text(skillLines, rightX, y);
   y += skillLines.length * 3.2 + 5;

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cloud, Server, Users, FolderKanban, Container, ArrowRightLeft, DollarSign, UserCheck } from "lucide-react";
+import { Cloud, Server, Users, FolderKanban, Container, ArrowRightLeft, DollarSign, UserCheck, BrainCircuit, Cpu } from "lucide-react";
 
 const skills = [
   { name: "Cloud Architecture Design", icon: Cloud },
@@ -10,6 +10,8 @@ const skills = [
   { name: "Cloud Migration Strategies", icon: ArrowRightLeft },
   { name: "Cost Optimization", icon: DollarSign },
   { name: "Technical Leadership & Mentoring", icon: UserCheck },
+  { name: "LLMs – Inference & Deployment", icon: BrainCircuit },
+  { name: "GPU-based Workloads (Training & Inference)", icon: Cpu },
 ];
 
 const SkillsSection = () => {
