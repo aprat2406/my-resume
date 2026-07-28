@@ -143,6 +143,7 @@ export const generateResumeDocx = async () => {
 
           // Certifications
           sectionHeading("Certifications"),
+          bulletItem("Claude Certified Architect – Foundations"),
           bulletItem("NVIDIA-Certified Associate – AI Infrastructure and Operations"),
           bulletItem("AWS AI/ML Practitioner"),
           bulletItem("Google Cloud Certified – Associate Cloud Engineer"),
@@ -152,10 +153,10 @@ export const generateResumeDocx = async () => {
 
           // Awards
           sectionHeading("Awards"),
-          bulletItem("DigitalOcean: Golden Fin Award 2025, Sammy Pearl Q1 2024, Sammy Pearl Q1 2023"),
-          bulletItem("Google: Touchstone Award – Individual Contributor, Dec 2021"),
-          bulletItem("T-Systems: Above and Beyond Award Q1 2020"),
-          bulletItem("Citrix: Multiple Kudos, Performance & Excellence Awards (2015–2018)"),
+          bulletItem("DigitalOcean: Golden Fin Award Dec 2025, Sammy Pearl Jun 2024, Sammy Pearl Mar 2023"),
+          bulletItem("Google Operations Center: Touchstone Award – Individual Contributor, May 2022"),
+          bulletItem("T-Systems: Above and Beyond Award, Aug 2019"),
+          bulletItem("Citrix: Multiple Kudos, Performance & Excellence Awards"),
 
           // Publications
           sectionHeading("Publications"),
