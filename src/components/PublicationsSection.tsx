@@ -1,25 +1,27 @@
 import { motion } from "framer-motion";
-import { FileText, Youtube, ExternalLink } from "lucide-react";
+import { FileText, Youtube, ExternalLink, Play } from "lucide-react";
 
 const tutorials = [
   { title: "DigitalOcean Inference Mode Comparison for Your Use Case", url: "https://www.digitalocean.com/community/tutorials" },
-  { title: "Upload a File to DigitalOcean Spaces Using AWS C++ SDK", url: "https://www.digitalocean.com/community/tutorials" },
-  { title: "How to Use AWS Java SDK with DigitalOcean Spaces", url: "https://www.digitalocean.com/community/tutorials" },
+  { title: "Upload a File to DigitalOcean Spaces Using AWS C++ SDK", url: "https://www.digitalocean.com/community/tutorials/upload-file-digitalocean-spaces-c-plus-plus-sdk" },
+  { title: "How to Use AWS Java SDK with DigitalOcean Spaces", url: "https://www.digitalocean.com/community/tutorials/how-to-use-aws-java-sdk-with-digitalocean-spaces" },
   { title: "Connecting DigitalOcean VPC to Microsoft Azure via Megaport", url: "https://www.digitalocean.com/community/tutorials/connect-vpc-to-azure-using-megaport" },
   { title: "Sending App Platform Logs to DO Managed OpenSearch", url: "https://www.digitalocean.com/community/tutorials/sending-app-platform-logs-to-do-managed-opensearch" },
   { title: "Partner Connect GCP", url: "https://www.digitalocean.com/community/tutorials/partner-connect-gcp" },
-  { title: "Integrate Telegram Bot with Gen AI", url: "https://www.digitalocean.com/community/tutorials/integrate-telegram-bot-gen-ai" },
+  { title: "Integrate Telegram Bot with Gen AI", url: "https://www.digitalocean.com/community/tutorials/integrate-telegram-bot-gradient" },
   { title: "Chatbot for Ghost Website", url: "https://www.digitalocean.com/community/tutorials/chatbot-for-ghost-website" },
-  { title: "Visualise Spaces Access Logs", url: "https://www.digitalocean.com/community/tutorials" },
+  { title: "Visualise Spaces Access Logs", url: "https://www.digitalocean.com/community/tutorials/visualize-logs-with-goaccess" },
 ];
 
 const videos = [
-  { id: "Jnnq16hr-fM" },
-  { id: "KYY5IhhOS3Q" },
-  { id: "AHRd4YjbH6c" },
-  { id: "MW6B27sGeDs" },
-  { id: "cgw6WoLcQ6w" },
-  { id: "xSEis5gTK0E" },
+  { id: "xSEis5gTK0E", title: "Webinar: How to Deploy Fast, Cost-efficient AI Workloads to DigitalOcean" },
+  { id: "nkAjHjx_7e0", title: "CloudxAI: Serverless Inference in Production" },
+  { id: "cgw6WoLcQ6w", title: "Keep Your Billing in Check with Monitoring and Alerts" },
+  { id: "Jnnq16hr-fM", title: "App Platform's Log Forwarding to OpenSearch" },
+  { id: "KYY5IhhOS3Q", title: "DigitalOcean Kubernetes Advanced Monitoring" },
+  { id: "AHRd4YjbH6c", title: "Tutorial: How to Add a Chatbot to a Ghost Website Using Gen AI" },
+  { id: "V0fVCHeX61c", title: "App Platform Intelligence Demo" },
+  { id: "MW6B27sGeDs", title: "DigitalOcean Solutions Walkthrough" },
 ];
 
 const PublicationsSection = () => {
