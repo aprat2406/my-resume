@@ -27,7 +27,7 @@ export const generateResumePDF = () => {
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(0, 200, 180);
-  doc.text("Senior Solutions Architect", m, 23);
+  doc.text("Senior Solutions Architect II", m, 23);
   doc.setFontSize(7.5);
   doc.setTextColor(180, 190, 200);
   doc.text("apratiush@gmail.com  |  +91-9741139265  |  Bengaluru, India", m, 29);
