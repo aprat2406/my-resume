@@ -2,11 +2,15 @@ import { motion } from "framer-motion";
 import { FileText, Youtube, ExternalLink } from "lucide-react";
 
 const tutorials = [
+  { title: "DigitalOcean Inference Mode Comparison for Your Use Case", url: "https://www.digitalocean.com/community/tutorials" },
+  { title: "Upload a File to DigitalOcean Spaces Using AWS C++ SDK", url: "https://www.digitalocean.com/community/tutorials" },
+  { title: "How to Use AWS Java SDK with DigitalOcean Spaces", url: "https://www.digitalocean.com/community/tutorials" },
+  { title: "Connecting DigitalOcean VPC to Microsoft Azure via Megaport", url: "https://www.digitalocean.com/community/tutorials/connect-vpc-to-azure-using-megaport" },
   { title: "Sending App Platform Logs to DO Managed OpenSearch", url: "https://www.digitalocean.com/community/tutorials/sending-app-platform-logs-to-do-managed-opensearch" },
   { title: "Partner Connect GCP", url: "https://www.digitalocean.com/community/tutorials/partner-connect-gcp" },
-  { title: "Connect VPC to Azure Using Megaport", url: "https://www.digitalocean.com/community/tutorials/connect-vpc-to-azure-using-megaport" },
   { title: "Integrate Telegram Bot with Gen AI", url: "https://www.digitalocean.com/community/tutorials/integrate-telegram-bot-gen-ai" },
   { title: "Chatbot for Ghost Website", url: "https://www.digitalocean.com/community/tutorials/chatbot-for-ghost-website" },
+  { title: "Visualise Spaces Access Logs", url: "https://www.digitalocean.com/community/tutorials" },
 ];
 
 const videos = [
