@@ -3,23 +3,20 @@ import { Trophy } from "lucide-react";
 
 const awards = [
   { company: "DigitalOcean", items: [
-    "Annual Golden Fin Award, 2025",
-    "Sammy Pearl Award, Q1 2024",
-    "Sammy Pearl Award, Q1 2023",
+    "Golden Fin Award, Dec 2025",
+    "Sammy Pearl Award, Jun 2024",
+    "Sammy Pearl Award, Mar 2023",
   ]},
   { company: "Google Operations Center", items: [
-    "Touchstone Award – Individual Contributor, Dec 2021",
+    "Touchstone Award – Individual Contributor, May 2022",
   ]},
   { company: "T-Systems", items: [
-    "Above and Beyond Award Q1 2020 – Cloud Migration Project",
+    "Above and Beyond Award, Aug 2019",
   ]},
   { company: "Citrix", items: [
-    "Kudos Award Q2 2015",
-    "Kudos Award Q3 2015",
-    "Performance Award Q1 2016",
-    "Excellence Award Q2 2016",
-    "Kudos Award Q2 2017",
-    "Kudos Award Q1 2018",
+    "Kudos Award",
+    "Performance Award",
+    "Excellence Award",
   ]},
 ];
 
