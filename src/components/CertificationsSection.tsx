@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 
 const certs = [
+  "Claude Certified Architect – Foundations",
   "NVIDIA-Certified Associate – AI Infrastructure and Operations",
   "AWS AI/ML Practitioner",
   "Google Cloud Certified – Associate Cloud Engineer",
