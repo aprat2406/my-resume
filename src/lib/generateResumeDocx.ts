@@ -86,16 +86,16 @@ export const generateResumeDocx = async () => {
 
           // Experience
           sectionHeading("Experience"),
-          jobHeader("DigitalOcean", "Senior Solutions Architect", "Dec 2022 – Present"),
+          jobHeader("DigitalOcean", "Senior Solutions Architect II", "Dec 2022 – Present"),
+          bulletItem("Designed LLM-based architectures with GPU inference, managed DBs, storage & containerized microservices."),
+          bulletItem("Advised on GPU selection, AI workload sizing & cost-performance trade-offs for inference and training."),
+          bulletItem("Developed evals for GenAI prototypes ensuring reliability and alignment in enterprise settings."),
           bulletItem("Led cloud migration from AWS to DigitalOcean, securing multi-million-pound contracts."),
-          bulletItem("Designed scalable infrastructure with auto-scaling, managed databases & secure payment workflows."),
-          bulletItem("Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding."),
+          bulletItem("Designed scalable infrastructure with auto-scaling and optimized managed databases."),
+          bulletItem("Led generative AI POCs and customer demos on DigitalOcean Gradient AI Platform."),
           bulletItem("Performed architecture reviews & cost audits, improving resource utilization by up to 40%."),
-          bulletItem("Led POC sessions with enterprise clients involving K8s, PostgreSQL & VPC networking."),
+          bulletItem("Engaged in pre-sales, presenting technical proposals to prospective clients."),
           bulletItem("Authored technical white papers, case studies, tutorials and conducted workshops."),
-          bulletItem("Led generative AI POCs on DigitalOcean Gradient AI Platform for AI-powered applications."),
-          bulletItem("Designed LLM architectures with GPU inference, managed DBs, storage & containerized microservices."),
-          bulletItem("Advised on GPU selection, AI workload sizing & cost-performance trade-offs."),
 
           jobHeader("Google Operations Center", "Cloud Engineer Specialist", "Oct 2021 – Dec 2022"),
           bulletItem("Provided Google Cloud training to new hires and experienced staff as technical trainer."),
