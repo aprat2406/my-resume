@@ -63,7 +63,7 @@ const PublicationsSection = () => {
         <div>
           <h3 className="text-lg font-semibold text-foreground mb-6 flex items-center gap-2">
             <Youtube size={20} className="text-primary" /> YouTube Videos
-            <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded-full">2,500+ views</span>
+            <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded-full">3,000+ views</span>
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {videos.map((v, i) => (

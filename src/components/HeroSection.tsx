@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           <div className="flex gap-4 justify-center lg:justify-start">
             <a
-              href="https://github.com/aksprat"
+              href="https://github.com/aprat2406"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"

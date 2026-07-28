@@ -5,7 +5,7 @@ export const profile = {
   location: "Bengaluru, India",
   email: "apratiush@gmail.com",
   phone: "+91 97411 39265",
-  github: "https://github.com/aksprat",
+  github: "https://github.com/aprat2406",
   linkedin: "https://www.linkedin.com/in/akshit-pratiush",
   summary:
     "Experienced architect designing scalable cloud solutions across AWS, Google Cloud & DigitalOcean. Passionate about cloud migrations, cost optimization & technical leadership.",

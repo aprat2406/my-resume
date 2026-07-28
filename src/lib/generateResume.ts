@@ -31,7 +31,7 @@ export const generateResumePDF = () => {
   doc.setFontSize(7.5);
   doc.setTextColor(180, 190, 200);
   doc.text("apratiush@gmail.com  |  +91-9741139265  |  Bengaluru, India", m, 29);
-  doc.text("github.com/aksprat  |  linkedin.com/in/akshit-pratiush", m, 34);
+  doc.text("github.com/aprat2406  |  linkedin.com/in/akshit-pratiush", m, 34);
   y = 44;
 
   // Helper: section title in left column
@@ -191,7 +191,7 @@ export const generateResumePDF = () => {
   doc.setTextColor(...mid);
   doc.text("• Published multiple technical tutorials on DigitalOcean Community.", rightX, y);
   y += 3.5;
-  doc.text("• YouTube channel with 2,500+ views across technical demo videos.", rightX, y);
+  doc.text("• YouTube channel with 3,000+ views across technical demo videos.", rightX, y);
 
   doc.save("Akshit_Pratiush_Resume.pdf");
 };

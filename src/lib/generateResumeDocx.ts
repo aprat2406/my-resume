@@ -66,7 +66,7 @@ export const generateResumeDocx = async () => {
           new Paragraph({
             spacing: { after: 120 },
             children: [
-              new TextRun({ text: "github.com/aksprat  |  linkedin.com/in/akshit-pratiush", size: 17, color: light, font: "Calibri" }),
+              new TextRun({ text: "github.com/aprat2406  |  linkedin.com/in/akshit-pratiush", size: 17, color: light, font: "Calibri" }),
             ],
           }),
 
@@ -160,7 +160,7 @@ export const generateResumeDocx = async () => {
           // Publications
           sectionHeading("Publications"),
           bulletItem("Published multiple technical tutorials on DigitalOcean Community."),
-          bulletItem("YouTube channel with 2,500+ views across technical demo videos."),
+          bulletItem("YouTube channel with 3,000+ views across technical demo videos."),
         ],
       },
     ],
