@@ -55,7 +55,7 @@ export const generateResumePDF = () => {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...mid);
   const summaryLines = doc.splitTextToSize(
-    "Experienced Senior Solutions Architect with expertise in designing scalable cloud solutions. Proven leadership in cloud migrations, infrastructure design, and cost optimization using AWS, Google Cloud, and DigitalOcean. Skilled in translating business needs into technical strategies, mentoring teams, and driving operational efficiency.",
+    "Senior Solutions Architect with 10+ years designing and scaling cloud-native and Generative AI platforms. Expert in LLM-based architectures, GPU-backed inference workloads, Kubernetes and managed AI services (including DigitalOcean Gradient AI). Strong background in cloud migrations, cost optimisation, enterprise pre-sales and customer POCs delivering multi-million contracts and 30% efficiency gains.",
     rightCol
   );
   doc.text(summaryLines, rightX, y);
