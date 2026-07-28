@@ -64,16 +64,16 @@ export const generateResumePDF = () => {
   // ─── EXPERIENCE ───
   sectionTitle("EXPERIENCE", y);
   const experiences = [
-    { company: "DigitalOcean", role: "Senior Solutions Architect", period: "Dec 2022 – Present", items: [
+    { company: "DigitalOcean", role: "Senior Solutions Architect II", period: "Dec 2022 – Present", items: [
+      "Designed LLM-based architectures with GPU inference, managed DBs, storage & containerized microservices.",
+      "Advised on GPU selection, AI workload sizing & cost-performance trade-offs for inference and training.",
+      "Developed evals for GenAI prototypes ensuring reliability and alignment in enterprise settings.",
       "Led cloud migration from AWS to DigitalOcean, securing multi-million-pound contracts.",
-      "Designed scalable infrastructure with auto-scaling, managed databases & secure payment workflows.",
-      "Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding.",
+      "Designed scalable infrastructure with auto-scaling and optimized managed databases.",
+      "Led generative AI POCs and customer demos on DigitalOcean Gradient AI Platform.",
       "Performed architecture reviews & cost audits, improving resource utilization by up to 40%.",
-      "Led POC sessions with enterprise clients involving K8s, PostgreSQL & VPC networking.",
+      "Engaged in pre-sales activities, presenting technical proposals to prospective clients.",
       "Authored technical white papers, case studies, tutorials and conducted workshops.",
-      "Led generative AI POCs on DigitalOcean Gradient AI Platform for AI-powered applications.",
-      "Designed LLM architectures with GPU inference, managed DBs, storage & containerized microservices.",
-      "Advised on GPU selection, AI workload sizing & cost-performance trade-offs.",
     ]},
     { company: "Google Operations Center", role: "Cloud Engineer Specialist", period: "Oct 2021 – Dec 2022", items: [
       "Provided Google Cloud training to new hires and experienced staff as technical trainer.",
