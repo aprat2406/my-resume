@@ -54,7 +54,7 @@ export const generateResumeDocx = async () => {
           new Paragraph({
             spacing: { after: 30 },
             children: [
-              new TextRun({ text: "Senior Solutions Architect", size: 21, color: teal, font: "Calibri" }),
+              new TextRun({ text: "Senior Solutions Architect II", size: 21, color: teal, font: "Calibri" }),
             ],
           }),
           new Paragraph({
