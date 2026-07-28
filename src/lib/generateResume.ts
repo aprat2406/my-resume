@@ -149,6 +149,7 @@ export const generateResumePDF = () => {
   checkPage(18);
   sectionTitle("CERTIFICATIONS", y);
   const certs = [
+    "Claude Certified Architect – Foundations",
     "NVIDIA-Certified Associate – AI Infrastructure and Operations",
     "AWS AI/ML Practitioner",
     "Google Cloud Certified – Associate Cloud Engineer",
@@ -169,10 +170,10 @@ export const generateResumePDF = () => {
   checkPage(14);
   sectionTitle("AWARDS", y);
   const awards = [
-    "DigitalOcean: Golden Fin Award 2025, Sammy Pearl Q1 2024, Sammy Pearl Q1 2023",
-    "Google: Touchstone Award – Individual Contributor, Dec 2021",
-    "T-Systems: Above and Beyond Award Q1 2020",
-    "Citrix: Multiple Kudos, Performance & Excellence Awards (2015–2018)",
+    "DigitalOcean: Golden Fin Award Dec 2025, Sammy Pearl Jun 2024, Sammy Pearl Mar 2023",
+    "Google Operations Center: Touchstone Award – Individual Contributor, May 2022",
+    "T-Systems: Above and Beyond Award, Aug 2019",
+    "Citrix: Multiple Kudos, Performance & Excellence Awards",
   ];
   doc.setFontSize(7.5);
   doc.setTextColor(...mid);
