@@ -114,10 +114,16 @@ var publications = {
     { title: "Chatbot for Ghost Website", url: "https://www.digitalocean.com/community/tutorials/chatbot-for-ghost-website" },
     { title: "Visualise Spaces Access Logs", url: "https://www.digitalocean.com/community/tutorials" }
   ],
-  videos: ["Jnnq16hr-fM", "KYY5IhhOS3Q", "AHRd4YjbH6c", "MW6B27sGeDs", "cgw6WoLcQ6w", "xSEis5gTK0E"].map((id) => ({
-    id,
-    url: `https://www.youtube.com/watch?v=${id}`
-  })),
+  videos: [
+    { id: "xSEis5gTK0E", title: "Webinar: How to Deploy Fast, Cost-efficient AI Workloads to DigitalOcean" },
+    { id: "nkAjHjx_7e0", title: "CloudxAI: Serverless Inference in Production" },
+    { id: "cgw6WoLcQ6w", title: "Keep Your Billing in Check with Monitoring and Alerts" },
+    { id: "Jnnq16hr-fM", title: "App Platform's Log Forwarding to OpenSearch" },
+    { id: "KYY5IhhOS3Q", title: "DigitalOcean Kubernetes Advanced Monitoring" },
+    { id: "AHRd4YjbH6c", title: "Tutorial: How to Add a Chatbot to a Ghost Website Using Gen AI" },
+    { id: "V0fVCHeX61c", title: "App Platform Intelligence Demo" },
+    { id: "MW6B27sGeDs", title: "DigitalOcean Solutions Walkthrough" }
+  ].map((v) => ({ ...v, url: `https://www.youtube.com/watch?v=${v.id}` })),
   videoStats: "3,000+ views across all videos"
 };
 
