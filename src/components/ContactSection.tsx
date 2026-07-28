@@ -32,7 +32,7 @@ const ContactSection = () => {
 
           <div className="flex justify-center gap-4">
             <a
-              href="https://github.com/aksprat"
+              href="https://github.com/aprat2406"
               target="_blank"
               rel="noreferrer"
               className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"

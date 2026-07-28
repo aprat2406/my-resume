@@ -4,19 +4,19 @@ import { Briefcase } from "lucide-react";
 const experiences = [
   {
     company: "DigitalOcean",
-    role: "Senior Solutions Architect",
+    role: "Senior Solutions Architect II",
     period: "Dec 2022 – Present",
     highlights: [
-      "Led end-to-end cloud migration from AWS to DigitalOcean, resulting in multi-million-pound contracts.",
-      "Designed scalable infrastructure for data analytics platforms with auto-scaling and managed databases.",
-      "Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding.",
+      "Designed LLM-based application architectures leveraging GPU-backed inference, managed databases, object storage, and containerized microservices.",
+      "Advised customers on GPU selection, AI workload sizing, and cost-performance trade-offs for inference and light model training.",
+      "Developed evals for GenAI prototypes, ensuring reliability and alignment in enterprise settings.",
+      "Led end-to-end cloud migration of a complex production workload from AWS to DigitalOcean, resulting in multi-million pound contracts.",
+      "Designed scalable cloud infrastructure for a data analytics platform with auto-scaling and optimized managed databases.",
+      "Led multiple generative AI POCs and customer demos on the DigitalOcean Gradient AI Platform.",
       "Performed architecture reviews and cost audits, improving resource utilization by up to 40%.",
-      "Led POC sessions with enterprise clients involving Kubernetes, PostgreSQL, and VPC networking.",
-      "Authored technical white papers and case studies for the wider technology community.",
+      "Engaged in pre-sales activities, presenting technical proposals and demonstrating solution value to prospective clients.",
+      "Collaborated with product managers to define technical requirements and plan the product roadmap.",
       "Conducted technical workshops and webinars to educate clients on product features.",
-      "Led generative AI POCs and demos on DigitalOcean Gradient AI Platform, enabling customers to build and scale AI-powered applications.",
-      "Designed LLM-based architectures leveraging GPU inference, managed databases, object storage, and containerized microservices.",
-      "Advised customers on GPU selection, AI workload sizing, and cost-performance trade-offs for inference and training.",
     ],
   },
   {

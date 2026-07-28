@@ -42,12 +42,12 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-center lg:text-left"
         >
-          <p className="text-primary font-mono text-sm mb-3 tracking-wider uppercase">Senior Solutions Architect</p>
+          <p className="text-primary font-mono text-sm mb-3 tracking-wider uppercase">Senior Solutions Architect II</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4">
             Akshit <span className="text-primary">Pratiush</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
-            Experienced architect designing scalable cloud solutions across AWS, Google Cloud & DigitalOcean. Passionate about cloud migrations, cost optimization & technical leadership.
+            10+ years designing and scaling cloud-native and Generative AI platforms. Expert in LLM architectures, GPU-backed inference, Kubernetes and managed AI services including DigitalOcean Gradient AI.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
@@ -61,7 +61,7 @@ const HeroSection = () => {
 
           <div className="flex gap-4 justify-center lg:justify-start">
             <a
-              href="https://github.com/aksprat"
+              href="https://github.com/aprat2406"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm font-medium"

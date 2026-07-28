@@ -27,11 +27,11 @@ export const generateResumePDF = () => {
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(0, 200, 180);
-  doc.text("Senior Solutions Architect", m, 23);
+  doc.text("Senior Solutions Architect II", m, 23);
   doc.setFontSize(7.5);
   doc.setTextColor(180, 190, 200);
   doc.text("apratiush@gmail.com  |  +91-9741139265  |  Bengaluru, India", m, 29);
-  doc.text("github.com/aksprat  |  linkedin.com/in/akshit-pratiush", m, 34);
+  doc.text("github.com/aprat2406  |  linkedin.com/in/akshit-pratiush", m, 34);
   y = 44;
 
   // Helper: section title in left column
@@ -55,7 +55,7 @@ export const generateResumePDF = () => {
   doc.setFont("helvetica", "normal");
   doc.setTextColor(...mid);
   const summaryLines = doc.splitTextToSize(
-    "Experienced Senior Solutions Architect with expertise in designing scalable cloud solutions. Proven leadership in cloud migrations, infrastructure design, and cost optimization using AWS, Google Cloud, and DigitalOcean. Skilled in translating business needs into technical strategies, mentoring teams, and driving operational efficiency.",
+    "Senior Solutions Architect with 10+ years designing and scaling cloud-native and Generative AI platforms. Expert in LLM-based architectures, GPU-backed inference workloads, Kubernetes and managed AI services (including DigitalOcean Gradient AI). Strong background in cloud migrations, cost optimisation, enterprise pre-sales and customer POCs delivering multi-million contracts and 30% efficiency gains.",
     rightCol
   );
   doc.text(summaryLines, rightX, y);
@@ -64,16 +64,16 @@ export const generateResumePDF = () => {
   // ─── EXPERIENCE ───
   sectionTitle("EXPERIENCE", y);
   const experiences = [
-    { company: "DigitalOcean", role: "Senior Solutions Architect", period: "Dec 2022 – Present", items: [
+    { company: "DigitalOcean", role: "Senior Solutions Architect II", period: "Dec 2022 – Present", items: [
+      "Designed LLM-based architectures with GPU inference, managed DBs, storage & containerized microservices.",
+      "Advised on GPU selection, AI workload sizing & cost-performance trade-offs for inference and training.",
+      "Developed evals for GenAI prototypes ensuring reliability and alignment in enterprise settings.",
       "Led cloud migration from AWS to DigitalOcean, securing multi-million-pound contracts.",
-      "Designed scalable infrastructure with auto-scaling, managed databases & secure payment workflows.",
-      "Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding.",
+      "Designed scalable infrastructure with auto-scaling and optimized managed databases.",
+      "Led generative AI POCs and customer demos on DigitalOcean Gradient AI Platform.",
       "Performed architecture reviews & cost audits, improving resource utilization by up to 40%.",
-      "Led POC sessions with enterprise clients involving K8s, PostgreSQL & VPC networking.",
+      "Engaged in pre-sales activities, presenting technical proposals to prospective clients.",
       "Authored technical white papers, case studies, tutorials and conducted workshops.",
-      "Led generative AI POCs on DigitalOcean Gradient AI Platform for AI-powered applications.",
-      "Designed LLM architectures with GPU inference, managed DBs, storage & containerized microservices.",
-      "Advised on GPU selection, AI workload sizing & cost-performance trade-offs.",
     ]},
     { company: "Google Operations Center", role: "Cloud Engineer Specialist", period: "Oct 2021 – Dec 2022", items: [
       "Provided Google Cloud training to new hires and experienced staff as technical trainer.",
@@ -149,6 +149,7 @@ export const generateResumePDF = () => {
   checkPage(18);
   sectionTitle("CERTIFICATIONS", y);
   const certs = [
+    "Claude Certified Architect – Foundations",
     "NVIDIA-Certified Associate – AI Infrastructure and Operations",
     "AWS AI/ML Practitioner",
     "Google Cloud Certified – Associate Cloud Engineer",
@@ -169,10 +170,10 @@ export const generateResumePDF = () => {
   checkPage(14);
   sectionTitle("AWARDS", y);
   const awards = [
-    "DigitalOcean: Golden Fin Award 2025, Sammy Pearl Q1 2024, Sammy Pearl Q1 2023",
-    "Google: Touchstone Award – Individual Contributor, Dec 2021",
-    "T-Systems: Above and Beyond Award Q1 2020",
-    "Citrix: Multiple Kudos, Performance & Excellence Awards (2015–2018)",
+    "DigitalOcean: Golden Fin Award Dec 2025, Sammy Pearl Jun 2024, Sammy Pearl Mar 2023",
+    "Google Operations Center: Touchstone Award – Individual Contributor, May 2022",
+    "T-Systems: Above and Beyond Award, Aug 2019",
+    "Citrix: Multiple Kudos, Performance & Excellence Awards",
   ];
   doc.setFontSize(7.5);
   doc.setTextColor(...mid);
@@ -191,7 +192,7 @@ export const generateResumePDF = () => {
   doc.setTextColor(...mid);
   doc.text("• Published multiple technical tutorials on DigitalOcean Community.", rightX, y);
   y += 3.5;
-  doc.text("• YouTube channel with 2,500+ views across technical demo videos.", rightX, y);
+  doc.text("• YouTube channel with 3,000+ views across technical demo videos.", rightX, y);
 
   doc.save("Akshit_Pratiush_Resume.pdf");
 };

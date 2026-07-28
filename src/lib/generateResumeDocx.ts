@@ -54,7 +54,7 @@ export const generateResumeDocx = async () => {
           new Paragraph({
             spacing: { after: 30 },
             children: [
-              new TextRun({ text: "Senior Solutions Architect", size: 21, color: teal, font: "Calibri" }),
+              new TextRun({ text: "Senior Solutions Architect II", size: 21, color: teal, font: "Calibri" }),
             ],
           }),
           new Paragraph({
@@ -66,7 +66,7 @@ export const generateResumeDocx = async () => {
           new Paragraph({
             spacing: { after: 120 },
             children: [
-              new TextRun({ text: "github.com/aksprat  |  linkedin.com/in/akshit-pratiush", size: 17, color: light, font: "Calibri" }),
+              new TextRun({ text: "github.com/aprat2406  |  linkedin.com/in/akshit-pratiush", size: 17, color: light, font: "Calibri" }),
             ],
           }),
 
@@ -76,7 +76,7 @@ export const generateResumeDocx = async () => {
             spacing: { after: 80 },
             children: [
               new TextRun({
-                text: "Experienced Senior Solutions Architect with expertise in designing scalable cloud solutions. Proven leadership in cloud migrations, infrastructure design, and cost optimization using AWS, Google Cloud, and DigitalOcean. Skilled in translating business needs into technical strategies, mentoring teams, and driving operational efficiency.",
+                text: "Senior Solutions Architect with 10+ years designing and scaling cloud-native and Generative AI platforms. Expert in LLM-based architectures, GPU-backed inference workloads, Kubernetes and managed AI services (including DigitalOcean Gradient AI). Strong background in cloud migrations, cost optimisation, enterprise pre-sales and customer POCs delivering multi-million contracts and 30% efficiency gains.",
                 size: 18,
                 color: mid,
                 font: "Calibri",
@@ -86,16 +86,16 @@ export const generateResumeDocx = async () => {
 
           // Experience
           sectionHeading("Experience"),
-          jobHeader("DigitalOcean", "Senior Solutions Architect", "Dec 2022 – Present"),
+          jobHeader("DigitalOcean", "Senior Solutions Architect II", "Dec 2022 – Present"),
+          bulletItem("Designed LLM-based architectures with GPU inference, managed DBs, storage & containerized microservices."),
+          bulletItem("Advised on GPU selection, AI workload sizing & cost-performance trade-offs for inference and training."),
+          bulletItem("Developed evals for GenAI prototypes ensuring reliability and alignment in enterprise settings."),
           bulletItem("Led cloud migration from AWS to DigitalOcean, securing multi-million-pound contracts."),
-          bulletItem("Designed scalable infrastructure with auto-scaling, managed databases & secure payment workflows."),
-          bulletItem("Built reusable IaC modules (Terraform, Ansible) to accelerate client onboarding."),
+          bulletItem("Designed scalable infrastructure with auto-scaling and optimized managed databases."),
+          bulletItem("Led generative AI POCs and customer demos on DigitalOcean Gradient AI Platform."),
           bulletItem("Performed architecture reviews & cost audits, improving resource utilization by up to 40%."),
-          bulletItem("Led POC sessions with enterprise clients involving K8s, PostgreSQL & VPC networking."),
+          bulletItem("Engaged in pre-sales, presenting technical proposals to prospective clients."),
           bulletItem("Authored technical white papers, case studies, tutorials and conducted workshops."),
-          bulletItem("Led generative AI POCs on DigitalOcean Gradient AI Platform for AI-powered applications."),
-          bulletItem("Designed LLM architectures with GPU inference, managed DBs, storage & containerized microservices."),
-          bulletItem("Advised on GPU selection, AI workload sizing & cost-performance trade-offs."),
 
           jobHeader("Google Operations Center", "Cloud Engineer Specialist", "Oct 2021 – Dec 2022"),
           bulletItem("Provided Google Cloud training to new hires and experienced staff as technical trainer."),
@@ -143,6 +143,7 @@ export const generateResumeDocx = async () => {
 
           // Certifications
           sectionHeading("Certifications"),
+          bulletItem("Claude Certified Architect – Foundations"),
           bulletItem("NVIDIA-Certified Associate – AI Infrastructure and Operations"),
           bulletItem("AWS AI/ML Practitioner"),
           bulletItem("Google Cloud Certified – Associate Cloud Engineer"),
@@ -152,15 +153,15 @@ export const generateResumeDocx = async () => {
 
           // Awards
           sectionHeading("Awards"),
-          bulletItem("DigitalOcean: Golden Fin Award 2025, Sammy Pearl Q1 2024, Sammy Pearl Q1 2023"),
-          bulletItem("Google: Touchstone Award – Individual Contributor, Dec 2021"),
-          bulletItem("T-Systems: Above and Beyond Award Q1 2020"),
-          bulletItem("Citrix: Multiple Kudos, Performance & Excellence Awards (2015–2018)"),
+          bulletItem("DigitalOcean: Golden Fin Award Dec 2025, Sammy Pearl Jun 2024, Sammy Pearl Mar 2023"),
+          bulletItem("Google Operations Center: Touchstone Award – Individual Contributor, May 2022"),
+          bulletItem("T-Systems: Above and Beyond Award, Aug 2019"),
+          bulletItem("Citrix: Multiple Kudos, Performance & Excellence Awards"),
 
           // Publications
           sectionHeading("Publications"),
           bulletItem("Published multiple technical tutorials on DigitalOcean Community."),
-          bulletItem("YouTube channel with 2,500+ views across technical demo videos."),
+          bulletItem("YouTube channel with 3,000+ views across technical demo videos."),
         ],
       },
     ],
