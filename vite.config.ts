@@ -13,6 +13,11 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  preview: {
+    host: true,
+    port: Number(process.env.PORT) || 8080,
+    allowedHosts: true,
+  },
   plugins: [react(), mcpPlugin(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
