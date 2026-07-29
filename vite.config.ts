@@ -13,6 +13,11 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  preview: {
+    host: "::",
+    port: 8080,
+    allowedHosts: ["myresume-8caw7.ondigitalocean.app"],
+  },
   plugins: [react(), mcpPlugin(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
