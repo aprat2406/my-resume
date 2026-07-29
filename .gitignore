@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Keep bun lockfile local; DO App Platform uses package-lock.json
+bun.lock
+bun.lockb
